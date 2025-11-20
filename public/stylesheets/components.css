@@ -1,0 +1,133 @@
+/*******
+*********** General ***********
+********/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--gradient-bg);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+
+/*******
+*********** tipografías ***********
+********/
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+p {
+    color: var(--color-text-muted);
+}
+
+
+/*******
+*********** cards ***********
+********/
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background: var(--gradient-card);
+    padding: 20px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+
+/*******
+*********** Botones ***********
+********/
+button,
+.btn {
+    background: var(--gradient-primary);
+    color: var(--color-text);
+    border: none;
+    padding: 12px 22px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    font-size: 1rem;
+}
+
+button:hover,
+.btn:hover {
+    background: var(--gradient-primary-hover);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-strong);
+}
+
+button:active,
+.btn:active {
+    background: var(--gradient-primary-active);
+    transform: translateY(0);
+}
+
+
+/*Botón secundario*/
+.btn-secondary {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+}
+
+
+/*******
+*********** Inputs y formularios***********
+********/
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    background: #111217;
+    color: var(--color-text);
+    border: 1px solid #2a2c33;
+    border-radius: var(--radius-sm);
+    margin-bottom: 15px;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(47, 107, 255, 0.3);
+    outline: none;
+}
