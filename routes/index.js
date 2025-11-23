@@ -6,4 +6,14 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'MyCinemaCollector' });
 });
 
+/* GET login page. */
+router.get('/login', function(req, res, next) {
+  res.render('login', {});
+});
+
+/* GET contact page. */
+router.get('/contact', function(req, res, next) {
+  res.render('contact', {});
+});
+
 module.exports = router;

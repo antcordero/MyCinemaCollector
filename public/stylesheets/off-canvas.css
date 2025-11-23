@@ -1,0 +1,108 @@
+/* Offcanvas overlay */
+.offcanvas-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(14,18,36,0.42);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 101;
+    transition: opacity 0.2s;
+  }
+  .offcanvas-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Offcanvas panel */
+  .offcanvas-register {
+    position: fixed;
+    top: 0; right: -370px;
+    width: 340px; max-width: 98vw;
+    height: 100vh;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-strong);
+    border-radius: 8px 0 0 8px;
+    z-index: 102;
+    padding: 2.2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    transition: right 0.25s cubic-bezier(.54,.14,.38,.89);
+  }
+  .offcanvas-register.active {
+    right: 0;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-size: 2rem;
+    position: absolute;
+    top: 16px; right: 18px;
+    cursor: pointer;
+    transition: color 0.17s;
+  }
+  .close-btn:hover {
+    color: #FF6B00;
+  }
+  
+  /* Form and Typography */
+  .register-title {
+    font-family: var(--titles-font);
+    font-size: 1.27rem;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 1.2rem;
+    color: var(--color-primary);
+    margin-top: 0.8rem;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .register-input {
+    padding: 11px 14px;
+    background: #111217;
+    color: var(--color-text);
+    border: 1px solid #2a2c33;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    transition: border 0.2s, box-shadow 0.2s;
+  }
+  .register-input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(47, 107, 255, 0.13);
+  }
+  
+  .register-btn {
+    font-size: 1.09rem;
+    background: var(--gradient-primary);
+    color: #fff;
+    border-radius: var(--radius-md);
+    font-family: var(--titles-font);
+    font-weight: 600;
+    border: none;
+    padding: 13px 0;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: background 0.15s;
+  }
+  .register-btn:hover {
+    background: var(--gradient-primary-hover);
+  }
+  
+  /* Responsive for mobile */
+  @media (max-width: 520px) {
+    .offcanvas-register {
+      width: 96vw;
+      padding: 2.2rem 0.8rem;
+    }
+  }
+  

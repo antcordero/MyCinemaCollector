@@ -1,0 +1,76 @@
+header {
+    background: var(--secondary-bg);
+    box-shadow: var(--shadow-soft);
+    padding: 0.8rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+header nav {
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header .nav-logo img {
+    height: 42px;
+    width: auto;
+}
+
+header .nav-logo span {
+    font-family: var(--titles-font);
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+header .nav-links a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    padding: 0.4rem 1.1rem;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s, color 0.2s;
+}
+
+header .nav-links a:hover,
+header .nav-links a:focus {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+header .btn {
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-md);
+    font-family: var(--titles-font);
+    font-weight: 600;
+    padding: 0.48rem 1.3rem;
+    cursor: pointer;
+    transition: background 0.18s, transform 0.17s, box-shadow 0.15s;
+    box-shadow: var(--shadow-soft);
+}
+
+header .btn:hover {
+    background: #3c78ff;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: var(--shadow-strong);
+}

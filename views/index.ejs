@@ -1,11 +1,143 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+
+<head>
+  <title>
+    <%= title %> - Collect and organize your movies
+  </title>
+
+  <!--Meta-->
+  <meta charset="UTF-8" />
+  <meta name="description"
+    content="Manage your movie collection, organize titles, and discover the latest additions from the community at MyCinemaCollector." />
+  <meta name="keywords" content="movies, collection, users, cinema, organization, lending" />
+  <meta name="author" content="Antonio Cordero Molina 2ºDAW" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--Estilos-->
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="/stylesheets/theme.css" />
+  <link rel="stylesheet" href="/stylesheets/components.css" />
+
+  <!--Fuentes-->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <!--Logo-->
+  <link rel="icon" type="image/svg+xml" href="/images/logo.svg">
+
+  <!--Iconos-->
+  <script src="https://kit.fontawesome.com/ef48f4e9ad.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!--Header y Menu nav-->
+  <%- include("partials/header") %>
+
+  <main>
+    <!--Hero Section-->
+    <section class="hero">
+      <h1>Welcome to MyCinemaCollector</h1>
+      <p>
+        Browse and organize your movie collection, see the latest titles added by the community, and discover which ones are available for lending. Manage, explore, and enjoy your love of cinema from one place.
+      </p>
+      <a href="#" class="btn" id="open-registration">Start now</a>
+    </section>
+
+    <!--Grid peliculas recientes-->
+    <section class="movies">
+      <h2>Latest movies added</h2>
+      <hr class="divider-orange">
+      <div class="movies-grid">
+        <div class="card">
+          <img src="/images/blade_runner_2049.jpg" alt="Blade Runner 2049">
+          <span>Blade Runner 2049</span>
+          <div class="tags">
+            <span class="tag">Sci-Fi</span>
+            <span class="tag">Thriller</span>
+          </div>
+          <a href="#" class="card-link">See more</a>
+        </div>
+        <div class="card">
+          <img src="/images/la_la_land.jpg" alt="La La Land">
+          <span>La La Land</span>
+          <div class="tags">
+            <span class="tag">Musical</span>
+            <span class="tag">Romance</span>
+            <span class="tag">Drama</span>
+          </div>
+          <a href="#" class="card-link">See more</a>
+        </div>
+        <div class="card">
+          <img src="/images/the_nice_guys.jpg" alt="The Nice Guys">
+          <span>The Nice Guys</span>
+          <div class="tags">
+            <span class="tag">Comedy</span>
+            <span class="tag">Action</span>
+            <span class="tag">Crime</span>
+          </div>
+          <a href="#" class="card-link">See more</a>
+        </div>
+        <div class="card">
+          <img src="/images/drive.jpg" alt="Drive">
+          <span>Drive</span>
+          <div class="tags">
+            <span class="tag">Action</span>
+            <span class="tag">Crime</span>
+            <span class="tag">Thriller</span>
+          </div>
+          <a href="#" class="card-link">See more</a>
+        </div>
+        <div class="card">
+          <img src="/images/crazy_stupid_love.jpg" alt="Crazy, Stupid, Love">
+          <span>Crazy, Stupid, Love</span>
+          <div class="tags">
+            <span class="tag">Romance</span>
+            <span class="tag">Comedy</span>
+          </div>
+          <a href="#" class="card-link">See more</a>
+        </div>      
+        <div class="card">
+          <img src="/images/barbie.webp" alt="Barbie">
+          <span>Barbie</span>
+          <div class="tags">
+            <span class="tag">Comedy</span>
+            <span class="tag">Adventure</span>
+            <span class="tag">Fantasy</span>
+          </div>
+          <a href="#" class="card-link">See more</a>
+        </div>
+        <div class="card">
+          <img src="/images/the_place_beyond_the_pines.jpg" alt="The Place Beyond the Pines">
+          <span>The Place Beyond the Pines</span>
+          <div class="tags">
+            <span class="tag">Crime</span>
+            <span class="tag">Drama</span>
+            <span class="tag">Thriller</span>
+          </div>
+          <a href="#" class="card-link">See more</a>
+        </div>
+        <div class="card">
+          <img src="/images/the_gray_man.jpg" alt="The Gray Man">
+          <span>The Gray Man</span>
+          <div class="tags">
+            <span class="tag">Action</span>
+            <span class="tag">Thriller</span>
+          </div>
+          <a href="#" class="card-link">See more</a>
+        </div>
+      </div>
+      
+    </section>
+  </main>
+
+  <!--Footer with social links-->
+  <%- include("partials/footer") %>
+
+  <!--Offcanvas-->
+  <%- include("partials/off-canvas") %>
+
+  <script src="/javascripts/off-canvas.js"></script>
+
+</body>
 </html>
