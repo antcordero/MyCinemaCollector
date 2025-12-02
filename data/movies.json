@@ -1,0 +1,171 @@
+[
+    {
+        "id": 1,
+        "title": "Blade Runner 2049",
+        "poster": "/images/blade_runner_2049.jpg",
+        "genres": [
+            "Sci-Fi",
+            "Thriller"
+        ],
+        "year": 2017,
+        "director": "Denis Villeneuve",
+        "description": "A new blade runner unearths a secret that could plunge the remains of society into chaos, leading him to search for a former blade runner who has been missing for decades.",
+        "copies": [
+            {
+                "owner": "admin@mycinemacollector.com",
+                "status": "Available"
+            },
+            {
+                "owner": "user@mycinemacollector.com",
+                "status": "Lent"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "La La Land",
+        "poster": "/images/la_la_land.jpg",
+        "genres": [
+            "Musical",
+            "Romance",
+            "Drama"
+        ],
+        "year": 2016,
+        "director": "Damien Chazelle",
+        "description": "An aspiring actress and a dedicated jazz musician struggle to pursue their dreams in Los Angeles while navigating love, ambition, and sacrifice.",
+        "copies": [
+            {
+                "owner": "admin@mycinemacollector.com",
+                "status": "Available"
+            },
+            {
+                "owner": "friend1@example.com",
+                "status": "Reserved"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "The Nice Guys",
+        "poster": "/images/the_nice_guys.jpg",
+        "genres": [
+            "Comedy",
+            "Action",
+            "Crime"
+        ],
+        "year": 2016,
+        "director": "Shane Black",
+        "description": "In 1970s Los Angeles, a private eye and a hired enforcer team up to investigate the disappearance of a young woman, uncovering a conspiracy along the way.",
+        "copies": [
+            {
+                "owner": "user@mycinemacollector.com",
+                "status": "Available"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Drive",
+        "poster": "/images/drive.jpg",
+        "genres": [
+            "Action",
+            "Crime",
+            "Thriller"
+        ],
+        "year": 2011,
+        "director": "Nicolas Winding Refn",
+        "description": "A mysterious Hollywood stunt driver who moonlights as a getaway driver gets involved in a heist that puts him and those he cares about in danger.",
+        "copies": [
+            {
+                "owner": "admin@mycinemacollector.com",
+                "status": "Available"
+            },
+            {
+                "owner": "collector@example.com",
+                "status": "Lent"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Crazy, Stupid, Love",
+        "poster": "/images/crazy_stupid_love.jpg",
+        "genres": [
+            "Romance",
+            "Comedy"
+        ],
+        "year": 2011,
+        "director": "Glenn Ficarra, John Requa",
+        "description": "A middle-aged man’s life changes dramatically when his wife asks for a divorce and he is taken under the wing of a young bachelor who teaches him how to start dating again.",
+        "copies": [
+            {
+                "owner": "user@mycinemacollector.com",
+                "status": "Available"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Barbie",
+        "poster": "/images/barbie.webp",
+        "genres": [
+            "Comedy",
+            "Adventure",
+            "Fantasy"
+        ],
+        "year": 2023,
+        "director": "Greta Gerwig",
+        "description": "Barbie and Ken leave their perfect world and embark on a journey of self-discovery when strange changes begin to affect Barbie’s seemingly flawless life.",
+        "copies": [
+            {
+                "owner": "admin@mycinemacollector.com",
+                "status": "Available"
+            },
+            {
+                "owner": "family@example.com",
+                "status": "Lent"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "The Place Beyond the Pines",
+        "poster": "/images/the_place_beyond_the_pines.jpg",
+        "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+        ],
+        "year": 2012,
+        "director": "Derek Cianfrance",
+        "description": "The lives of a stunt motorcyclist, a rookie cop and their families intersect over several years after a robbery sets off a chain of consequences.",
+        "copies": [
+            {
+                "owner": "user@mycinemacollector.com",
+                "status": "Available"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "The Gray Man",
+        "poster": "/images/the_gray_man.jpg",
+        "genres": [
+            "Action",
+            "Thriller"
+        ],
+        "year": 2022,
+        "director": "Anthony Russo, Joe Russo",
+        "description": "A skilled CIA operative uncovers agency secrets and becomes the target of a global manhunt led by a sociopathic former colleague.",
+        "copies": [
+            {
+                "owner": "admin@mycinemacollector.com",
+                "status": "Available"
+            },
+            {
+                "owner": "user@mycinemacollector.com",
+                "status": "Reserved"
+            }
+        ]
+    }
+]

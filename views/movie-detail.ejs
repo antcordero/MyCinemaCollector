@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        <%= title %> - MyCinemaCollector
+    </title>
+    <!--Meta-->
+  <meta charset="UTF-8" />
+  <meta name="description"
+    content="Manage your movie collection, organize titles, and discover the latest additions from the community at MyCinemaCollector." />
+  <meta name="keywords" content="movies, collection, users, cinema, organization, lending" />
+  <meta name="author" content="Antonio Cordero Molina 2ºDAW" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--Estilos-->
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="/stylesheets/theme.css" />
+  <link rel="stylesheet" href="/stylesheets/components.css" />
+  <link rel="stylesheet" href="/stylesheets/movie-details.css" />
+
+  <!--Fuentes-->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <!--Logo-->
+  <link rel="icon" type="image/svg+xml" href="/images/logo.svg">
+
+  <!--Iconos-->
+  <script src="https://kit.fontawesome.com/ef48f4e9ad.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <%- include("partials/header") %>
+
+        <main class="movie-detail">
+            <section class="movie-detail-hero">
+                <div class="movie-detail-poster">
+                    <img src="<%= movie.poster %>" alt="<%= movie.title %>">
+                </div>
+                <div class="movie-detail-info">
+                    <h1>
+                        <%= movie.title %>
+                    </h1>
+                    <p class="movie-meta">
+                        <span>
+                            <%= movie.year %>
+                        </span> ·
+                        <span>
+                            <%= movie.director %>
+                        </span>
+                    </p>
+
+                    <div class="movie-genres">
+                        <% movie.genres.forEach(g=> { %>
+                            <span class="tag">
+                                <%= g %>
+                            </span>
+                        <% }) %>
+                    </div>
+
+                    <p class="movie-description">
+                        <%= movie.description %>
+                    </p>
+                </div>
+            </section>
+
+            <section class="movie-copies">
+                <h2>Copies for this movie</h2>
+                <div class="copies-list">
+                    <% if (movie.copies && movie.copies.length> 0) { %>
+                        <% movie.copies.forEach(copy=> { %>
+                            <div class="copy-card">
+                                <p><strong>Owner:</strong>
+                                    <%= copy.owner %>
+                                </p>
+                                <p><strong>Status:</strong>
+                                    <%= copy.status %>
+                                </p>
+                            </div>
+                            <% }) %>
+                                <% } else { %>
+                                    <p>No copies registered for this movie yet.</p>
+                    <% } %>
+                </div>
+            </section>
+        </main>
+
+        <%- include("partials/footer") %>
+</body>
+
+</html>

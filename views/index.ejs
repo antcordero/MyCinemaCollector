@@ -49,84 +49,20 @@
       <h2>Latest movies added</h2>
       <hr class="divider-orange">
       <div class="movies-grid">
-        <div class="card">
-          <img src="/images/blade_runner_2049.jpg" alt="Blade Runner 2049">
-          <span>Blade Runner 2049</span>
-          <div class="tags">
-            <span class="tag">Sci-Fi</span>
-            <span class="tag">Thriller</span>
+        <% movies.forEach(movie => { %>
+          <div class="card">
+            <img src="<%= movie.poster %>" alt="<%= movie.title %>">
+            <span><%= movie.title %></span>
+            <div class="tags">
+              <% movie.genres.forEach(g => { %>
+                <span class="tag"><%= g %></span>
+              <% }) %>
+            </div>
+            <a href="/movies/<%= movie.id %>" class="card-link">See more</a>
           </div>
-          <a href="#" class="card-link">See more</a>
-        </div>
-        <div class="card">
-          <img src="/images/la_la_land.jpg" alt="La La Land">
-          <span>La La Land</span>
-          <div class="tags">
-            <span class="tag">Musical</span>
-            <span class="tag">Romance</span>
-            <span class="tag">Drama</span>
-          </div>
-          <a href="#" class="card-link">See more</a>
-        </div>
-        <div class="card">
-          <img src="/images/the_nice_guys.jpg" alt="The Nice Guys">
-          <span>The Nice Guys</span>
-          <div class="tags">
-            <span class="tag">Comedy</span>
-            <span class="tag">Action</span>
-            <span class="tag">Crime</span>
-          </div>
-          <a href="#" class="card-link">See more</a>
-        </div>
-        <div class="card">
-          <img src="/images/drive.jpg" alt="Drive">
-          <span>Drive</span>
-          <div class="tags">
-            <span class="tag">Action</span>
-            <span class="tag">Crime</span>
-            <span class="tag">Thriller</span>
-          </div>
-          <a href="#" class="card-link">See more</a>
-        </div>
-        <div class="card">
-          <img src="/images/crazy_stupid_love.jpg" alt="Crazy, Stupid, Love">
-          <span>Crazy, Stupid, Love</span>
-          <div class="tags">
-            <span class="tag">Romance</span>
-            <span class="tag">Comedy</span>
-          </div>
-          <a href="#" class="card-link">See more</a>
-        </div>      
-        <div class="card">
-          <img src="/images/barbie.webp" alt="Barbie">
-          <span>Barbie</span>
-          <div class="tags">
-            <span class="tag">Comedy</span>
-            <span class="tag">Adventure</span>
-            <span class="tag">Fantasy</span>
-          </div>
-          <a href="#" class="card-link">See more</a>
-        </div>
-        <div class="card">
-          <img src="/images/the_place_beyond_the_pines.jpg" alt="The Place Beyond the Pines">
-          <span>The Place Beyond the Pines</span>
-          <div class="tags">
-            <span class="tag">Crime</span>
-            <span class="tag">Drama</span>
-            <span class="tag">Thriller</span>
-          </div>
-          <a href="#" class="card-link">See more</a>
-        </div>
-        <div class="card">
-          <img src="/images/the_gray_man.jpg" alt="The Gray Man">
-          <span>The Gray Man</span>
-          <div class="tags">
-            <span class="tag">Action</span>
-            <span class="tag">Thriller</span>
-          </div>
-          <a href="#" class="card-link">See more</a>
-        </div>
+        <% }) %>
       </div>
+
       
     </section>
   </main>
