@@ -19,10 +19,7 @@ function saveMovies() {
 function findAllMovies() {
   return movies;
 }
-// Por si quieres filtrar “recientes”
-function findMoviesAfterYear(year) {
-  return movies.filter((m) => m.year >= year);
-}
+
 function findMovieById(id) {
   return movies.filter((m) => m.id == id)[0];
 }
@@ -45,11 +42,21 @@ function validateUser(email, password) {
   }
 }
 
+/************** función para encontrar las películas de un usuario cuando hace login *************/
+function findMoviesByOwner(ownerEmail) {
+  //usa movies.json
+  return movies.filter(movie =>
+    movie.copies && movie.copies.some(c => c.owner === ownerEmail)
+  );
+}
+
+
 
 module.exports = {
   findAllMovies,
-  findMoviesAfterYear,
   findMovieById,
   saveMovie,
   validateUser,
+  findMoviesByOwner
 };
+

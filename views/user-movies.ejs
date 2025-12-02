@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= title %> - MyCinemaCollector
+    </title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/components.css">
+    <link rel="stylesheet" href="/stylesheets/theme.css">
+    <link rel="stylesheet" href="/stylesheets/user-movies.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/svg+xml" href="/images/logo.svg">
+    
+    <script src="https://kit.fontawesome.com/ef48f4e9ad.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <%- include("partials/header") %>
+
+        <main class="user-movies">
+            <h1>Your movies, <%= username %></h1>
+
+            <table class="movies-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Status</th>
+                        <th>Format</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% movies.forEach(m=> {
+                        //buscar la copia del usuario concreto dentro de movie.copies
+                        const copy = m.copies.find(c => c.owner === username);
+                    %>
+                    <tr>
+                        <td>
+                            <%= m.title %>
+                        </td>
+                        <td>
+                            <%= copy ? copy.status : '-' %>
+                        </td>
+                        <td>
+                            <%= copy ? copy.format : '-' %>
+                        </td>
+                        <td>
+                            <a href="/movies/<%= m.id %>" class="btn-table">Details</a>
+                            <button class="btn-table btn-disabled">Edit</button>
+                            <button class="btn-table btn-disabled">Delete</button>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </main>
+
+        <%- include("partials/footer") %>
+</body>
+
+</html>
