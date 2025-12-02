@@ -12,12 +12,12 @@
         "description": "A new blade runner unearths a secret that could plunge the remains of society into chaos, leading him to search for a former blade runner who has been missing for decades.",
         "copies": [
             {
-                "owner": "admin@mycinemacollector.com",
+                "owner": "user@mycinemacollector.com",
                 "status": "Available",
                 "format": "Blu-ray"
             },
             {
-                "owner": "user@mycinemacollector.com",
+                "owner": "user1@mycinemacollector.com",
                 "status": "Lent",
                 "format": "Digital"
             }
@@ -37,12 +37,12 @@
         "description": "An aspiring actress and a dedicated jazz musician struggle to pursue their dreams in Los Angeles while navigating love, ambition, and sacrifice.",
         "copies": [
             {
-                "owner": "admin@mycinemacollector.com",
+                "owner": "user@mycinemacollector.com",
                 "status": "Available",
                 "format": "Blu-ray"
             },
             {
-                "owner": "user2@example.com",
+                "owner": "user2@mycinemacollector.com",
                 "status": "Reserved",
                 "format": "DVD"
             }
@@ -82,12 +82,12 @@
         "description": "A mysterious Hollywood stunt driver who moonlights as a getaway driver gets involved in a heist that puts him and those he cares about in danger.",
         "copies": [
             {
-                "owner": "admin@mycinemacollector.com",
+                "owner": "user@mycinemacollector.com",
                 "status": "Available",
                 "format": "4K UHD"
             },
             {
-                "owner": "user5@example.com",
+                "owner": "user4@mycinemacollector.com",
                 "status": "Lent",
                 "format": "Blu-ray"
             }
@@ -126,12 +126,12 @@
         "description": "Barbie and Ken leave their perfect world and embark on a journey of self-discovery when strange changes begin to affect Barbie’s seemingly flawless life.",
         "copies": [
             {
-                "owner": "admin@mycinemacollector.com",
+                "owner": "user@mycinemacollector.com",
                 "status": "Available",
                 "format": "4K UHD"
             },
             {
-                "owner": "user4@example.com",
+                "owner": "user3@mycinemacollector.com",
                 "status": "Lent",
                 "format": "Blu-ray"
             }
@@ -170,7 +170,7 @@
         "description": "A skilled CIA operative uncovers agency secrets and becomes the target of a global manhunt led by a sociopathic former colleague.",
         "copies": [
             {
-                "owner": "admin@mycinemacollector.com",
+                "owner": "user@mycinemacollector.com",
                 "status": "Available",
                 "format": "Digital"
             },
