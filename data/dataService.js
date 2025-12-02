@@ -41,8 +41,19 @@ function saveMovie(movie) {
 // --- Función de login, inspirada en el profe (para más adelante) ---
 function validateUser(email, password) {
   const result = users.filter(u => u.username === email);
-  if (result.length === 0) return false;
-  return result[0].password === password;
+  if (result.length === 0) {
+    return false;
+  } else {
+    return result[0].password === password;
+  }
+}
+
+//Mostrar las películas asociadas a un usuario por su email
+function findMoviesByOwner(ownerEmail) {
+  //Devuelve solo las pelis donde haya al menos una copia de ese usuario
+  return movies.filter(movie =>
+    movie.copies && movie.copies.some(c => c.owner === ownerEmail)
+  );
 }
 
 module.exports = {
@@ -50,5 +61,6 @@ module.exports = {
   findMoviesAfterYear,
   findMovieById,
   saveMovie,
-  validateUser
+  validateUser,
+  findMoviesByOwner
 };

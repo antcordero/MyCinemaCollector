@@ -6,5 +6,21 @@
   {
     "username": "user@mycinemacollector.com",
     "password": "abc"
+  },
+  {
+    "username": "user1@mycinemacollector.com",
+    "password": "user1"
+  },
+  {
+    "username": "user2@example.com",
+    "password": "user2"
+  },
+  {
+    "username": "user4@example.com",
+    "password": "user4"
+  },
+  {
+    "username": "user5@example.com",
+    "password": "user5"
   }
 ]
