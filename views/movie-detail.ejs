@@ -67,23 +67,26 @@
 
             <section class="movie-copies">
                 <h2>Copies for this movie</h2>
-                <div class="copies-list">
-                    <% if (movie.copies && movie.copies.length> 0) { %>
-                        <% movie.copies.forEach(copy=> { %>
-                            <div class="copy-card">
-                                <p><strong>Owner:</strong>
-                                    <%= copy.owner %>
-                                </p>
-                                <p><strong>Status:</strong>
-                                    <%= copy.status %>
-                                </p>
-                            </div>
-                            <% }) %>
-                                <% } else { %>
-                                    <p>No copies registered for this movie yet.</p>
-                    <% } %>
-                </div>
-            </section>
+              
+                <% if (movie.copies && movie.copies.length > 0) { %>
+                  <div class="copies-table">
+                    <div class="copies-header">
+                      <span>Owner</span>
+                      <span>Status</span>
+                      <span>Format</span>
+                    </div>
+                    <% movie.copies.forEach(copy => { %>
+                      <div class="copies-row">
+                        <span><%= copy.owner %></span>
+                        <span><%= copy.status %></span>
+                        <span><%= copy.format %></span>
+                      </div>
+                    <% }) %>
+                  </div>
+                <% } else { %>
+                  <p>No copies registered for this movie yet.</p>
+                <% } %>
+              </section>
         </main>
 
         <%- include("partials/footer") %>

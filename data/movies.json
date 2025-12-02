@@ -13,11 +13,13 @@
         "copies": [
             {
                 "owner": "admin@mycinemacollector.com",
-                "status": "Available"
+                "status": "Available",
+                "format": "Blu-ray"
             },
             {
                 "owner": "user@mycinemacollector.com",
-                "status": "Lent"
+                "status": "Lent",
+                "format": "Digital"
             }
         ]
     },
@@ -36,11 +38,13 @@
         "copies": [
             {
                 "owner": "admin@mycinemacollector.com",
-                "status": "Available"
+                "status": "Available",
+                "format": "Blu-ray"
             },
             {
-                "owner": "friend1@example.com",
-                "status": "Reserved"
+                "owner": "user2@example.com",
+                "status": "Reserved",
+                "format": "DVD"
             }
         ]
     },
@@ -58,8 +62,9 @@
         "description": "In 1970s Los Angeles, a private eye and a hired enforcer team up to investigate the disappearance of a young woman, uncovering a conspiracy along the way.",
         "copies": [
             {
-                "owner": "user@mycinemacollector.com",
-                "status": "Available"
+                "owner": "user1@mycinemacollector.com",
+                "status": "Available",
+                "format": "Digital"
             }
         ]
     },
@@ -78,11 +83,13 @@
         "copies": [
             {
                 "owner": "admin@mycinemacollector.com",
-                "status": "Available"
+                "status": "Available",
+                "format": "4K UHD"
             },
             {
-                "owner": "collector@example.com",
-                "status": "Lent"
+                "owner": "user5@example.com",
+                "status": "Lent",
+                "format": "Blu-ray"
             }
         ]
     },
@@ -99,8 +106,9 @@
         "description": "A middle-aged man’s life changes dramatically when his wife asks for a divorce and he is taken under the wing of a young bachelor who teaches him how to start dating again.",
         "copies": [
             {
-                "owner": "user@mycinemacollector.com",
-                "status": "Available"
+                "owner": "user1@mycinemacollector.com",
+                "status": "Available",
+                "format": "DVD"
             }
         ]
     },
@@ -119,11 +127,13 @@
         "copies": [
             {
                 "owner": "admin@mycinemacollector.com",
-                "status": "Available"
+                "status": "Available",
+                "format": "4K UHD"
             },
             {
-                "owner": "family@example.com",
-                "status": "Lent"
+                "owner": "user4@example.com",
+                "status": "Lent",
+                "format": "Blu-ray"
             }
         ]
     },
@@ -141,8 +151,9 @@
         "description": "The lives of a stunt motorcyclist, a rookie cop and their families intersect over several years after a robbery sets off a chain of consequences.",
         "copies": [
             {
-                "owner": "user@mycinemacollector.com",
-                "status": "Available"
+                "owner": "user1@mycinemacollector.com",
+                "status": "Available",
+                "format": "Blu-ray"
             }
         ]
     },
@@ -160,11 +171,13 @@
         "copies": [
             {
                 "owner": "admin@mycinemacollector.com",
-                "status": "Available"
+                "status": "Available",
+                "format": "Digital"
             },
             {
-                "owner": "user@mycinemacollector.com",
-                "status": "Reserved"
+                "owner": "user1@mycinemacollector.com",
+                "status": "Reserved",
+                "format": "Blu-ray"
             }
         ]
     }

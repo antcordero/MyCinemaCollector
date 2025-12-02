@@ -2,15 +2,14 @@
 @import "components.css";
 @import "theme.css";
 
-
 main.movie-detail {
     max-width: 1200px;
     margin: 3rem auto 2rem auto;
     padding: 0 2vw;
-  }
-  
-  /*poster + info */
-  .movie-detail-hero {
+}
+
+/*poster + info */
+.movie-detail-hero {
     display: grid;
     grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
     gap: 2rem;
@@ -19,33 +18,33 @@ main.movie-detail {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-soft);
     padding: 2rem;
-  }
-  
-  .movie-detail-poster img {
+}
+
+.movie-detail-poster img {
     width: 100%;
     border-radius: var(--radius-md);
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
     object-fit: cover;
-  }
-  
-  .movie-detail-info h1 {
+}
+
+.movie-detail-info h1 {
     font-family: var(--titles-font);
     font-size: 2rem;
     margin-bottom: 0.5rem;
     color: var(--color-text);
-  }
-  
-  .movie-meta {
+}
+
+.movie-meta {
     color: var(--color-text-secondary);
     margin-bottom: 0.8rem;
     font-size: 0.98rem;
-  }
-  
-  .movie-genres {
+}
+
+.movie-genres {
     margin-bottom: 1rem;
-  }
-  
-  .movie-genres .tag {
+}
+
+.movie-genres .tag {
     background: #23252c;
     color: var(--color-text-secondary);
     font-size: 0.72rem;
@@ -54,31 +53,60 @@ main.movie-detail {
     display: inline-block;
     margin-right: 6px;
     margin-bottom: 4px;
-  }
-  
-  .movie-description {
+}
+
+.movie-description {
     color: var(--color-text-secondary);
     line-height: 1.6;
     margin-bottom: 2rem;
-  }
-  
-  .movie-actions {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .movie-actions .btn {
-    font-size: 1.08rem;
-    background: var(--gradient-primary);
-    color: #fff;
-    border-radius: var(--radius-md);
+}
+
+/*copias en formato tabla*/
+.movie-copies {
+    margin-top: 2.5rem;
+}
+
+.movie-copies h2 {
     font-family: var(--titles-font);
-    font-weight: 600;
-    border: none;
-    padding: 13px 0;
-    cursor: pointer;
+    font-size: 1.4rem;
+    margin-bottom: 0.9rem;
+    color: var(--color-text);
+}
+
+.copies-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--gradient-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
     box-shadow: var(--shadow-soft);
-    transition: background 0.15s;
-  }
-  
+    font-size: 0.95rem;
+}
+
+.copies-header,
+.copies-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* Owner - Status - Format */
+  padding: 0.7rem 1rem;
+  align-items: center;
+}
+
+.copies-header {
+    background: rgba(255, 255, 255, 0.03);
+    font-weight: 600;
+    color: var(--color-text);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.copies-row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.copies-row:last-child {
+    border-bottom: none;
+}
+
+.copies-row span {
+    color: var(--color-text-secondary);
+    word-break: break-all;
+}
