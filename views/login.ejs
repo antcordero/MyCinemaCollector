@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Log in - MyCinemaCollector</title>
   <meta charset="UTF-8" />
@@ -10,35 +11,41 @@
   <link rel="icon" type="image/svg+xml" href="/images/logo.svg">
   <script src="https://kit.fontawesome.com/ef48f4e9ad.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <!--Header / Menu nav-->
   <%- include("partials/header") %>
 
-  <main>
-    <section class="login-section">
-      <h2 class="login-title">Back to your cinema life</h2>
-      <p class="login-subtitle">Choose one of the options to go</p>
-      <form class="login-form">
-        <input type="email" placeholder="example@example.com" class="login-input" required>
-        <input type="password" placeholder="Password" class="login-input" required>
-        <button type="submit" class="btn login-btn">Log in</button>
-      </form>
-      <div class="login-divider">
-        <span>Or continue with</span>
-        <div class="divider-line"></div>
-      </div>
-      <div class="login-social">
-        <button type="button" class="social-btn"><i class="fab fa-google"></i></button>
-        <button type="button" class="social-btn"><i class="fab fa-meta"></i></button>
-        <button type="button" class="social-btn"><i class="fab fa-apple"></i></button>
-      </div>
-      <div class="register-link">
-        <span>Don't have an account?</span>
-        <a href="/register">Register here <i class="fas fa-external-link-alt"></i></a>
-      </div>
-    </section>
-  </main>
+    <main>
+      <section class="login-section">
+        <h2 class="login-title">Back to your cinema life</h2>
+        <p class="login-subtitle">Choose one of the options to go</p>
+        <form class="login-form" action="/admin/login" method="post">
+          <input type="email" name="username" placeholder="example@example.com" class="login-input" required>
+          <input type="password" name="password" placeholder="Password" class="login-input" required>
+          <button type="submit" class="btn login-btn">Log in</button>
+          <% if (typeof error !=="undefined" && error) { %>
+            <p class="login-error">
+              <%= error %>
+            </p>
+          <% } %>
+        </form>
+        <div class="login-divider">
+          <span>Or continue with</span>
+          <div class="divider-line"></div>
+        </div>
+        <div class="login-social">
+          <button type="button" class="social-btn"><i class="fab fa-google"></i></button>
+          <button type="button" class="social-btn"><i class="fab fa-meta"></i></button>
+          <button type="button" class="social-btn"><i class="fab fa-apple"></i></button>
+        </div>
+        <div class="register-link">
+          <span>Don't have an account?</span>
+          <a href="/register">Register here <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </section>
+    </main>
 
-  <%- include("partials/footer") %>
+    <%- include("partials/footer") %>
 </body>
 </html>

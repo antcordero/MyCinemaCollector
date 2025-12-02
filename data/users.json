@@ -1,26 +1,49 @@
 [
   {
     "username": "admin@mycinemacollector.com",
-    "password": "1234"
+    "password": "1234",
+    "copies": [
+      { "id_movie": 1, "status": "Available", "format": "Blu-ray" },
+      { "id_movie": 2, "status": "Available", "format": "Blu-ray" },
+      { "id_movie": 4, "status": "Available", "format": "4K UHD" },
+      { "id_movie": 6, "status": "Available", "format": "4K UHD" },
+      { "id_movie": 8, "status": "Available", "format": "Digital" }
+    ]
   },
   {
     "username": "user@mycinemacollector.com",
-    "password": "abc"
+    "password": "abc",
+    "copies": []
   },
   {
     "username": "user1@mycinemacollector.com",
-    "password": "user1"
+    "password": "user1",
+    "copies": [
+      { "id_movie": 3, "status": "Available", "format": "Digital" },
+      { "id_movie": 5, "status": "Available", "format": "DVD" },
+      { "id_movie": 7, "status": "Available", "format": "Blu-ray" },
+      { "id_movie": 8, "status": "Reserved", "format": "Blu-ray" }
+    ]
   },
   {
-    "username": "user2@example.com",
-    "password": "user2"
+    "username": "user2@mycinemacollector.com",
+    "password": "user2",
+    "copies": [
+      { "id_movie": 2, "status": "Reserved", "format": "DVD" }
+    ]
   },
   {
-    "username": "user4@example.com",
-    "password": "user4"
+    "username": "user3@mycinemacollector.com",
+    "password": "user3",
+    "copies": [
+      { "id_movie": 6, "status": "Lent", "format": "Blu-ray" }
+    ]
   },
   {
-    "username": "user5@example.com",
-    "password": "user5"
+    "username": "user4@mycinemacollector.com",
+    "password": "user4",
+    "copies": [
+      { "id_movie": 4, "status": "Lent", "format": "Blu-ray" }
+    ]
   }
 ]
