@@ -1,16 +1,5 @@
 [
   {
-    "username": "admin@mycinemacollector.com",
-    "password": "1234",
-    "copies": [
-      { "id_movie": 1, "status": "Available", "format": "Blu-ray" },
-      { "id_movie": 2, "status": "Available", "format": "Blu-ray" },
-      { "id_movie": 4, "status": "Available", "format": "4K UHD" },
-      { "id_movie": 6, "status": "Available", "format": "4K UHD" },
-      { "id_movie": 8, "status": "Available", "format": "Digital" }
-    ]
-  },
-  {
     "username": "user@mycinemacollector.com",
     "password": "abc",
     "copies": []

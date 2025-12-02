@@ -7,7 +7,6 @@ var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var adminRouter = require('./routes/admin');
 
 var app = express();
 
@@ -30,10 +29,9 @@ app.use(session({
 
 // rutas
 app.use('/', indexRouter);
-app.use('/admin', adminRouter);
 app.use('/users', usersRouter);
 
-// catch 404 and forward to error handler
+// 404
 app.use(function(req, res, next) {
   next(createError(404));
 });
@@ -42,7 +40,6 @@ app.use(function(req, res, next) {
 app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
   res.status(err.status || 500);
   res.render('error');
 });
