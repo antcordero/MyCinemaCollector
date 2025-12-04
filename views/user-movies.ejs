@@ -26,7 +26,7 @@
         <main class="user-movies">
             <h1>Your movies, <%= username %>
             </h1>
-
+            <hr class="divider-orange">
             <table class="movies-table">
                 <thead>
                     <tr>
@@ -38,29 +38,24 @@
                 </thead>
                 <tbody>
                     <% movies.forEach(m=> {
-                        // buscar la copia del usuario concreto dentro de movie.copies
                         const copy = m.copies.find(c => c.owner === username);
                         %>
                         <tr>
-                            <td>
-                                <%= m.title %>
-                            </td>
-                            <td>
-                                <%= copy ? copy.status : '-' %>
-                            </td>
-                            <td>
-                                <%= copy ? copy.format : '-' %>
-                            </td>
+                            <td><%= m.title %></td>
+                            <td><%= copy ? copy.status : '-' %></td>
+                            <td><%= copy ? copy.format : '-' %></td>
                             <td>
                                 <a href="/movies/<%= m.id %>" class="btn-table">Details</a>
-                                <button class="btn-table btn-disabled">Edit</button>
+                                <button class="btn-table btn-edit">Edit</button>
                                 <button class="btn-table btn-disabled">Delete</button>
                             </td>
                         </tr>
                         <% }) %>
                 </tbody>
             </table>
+        </main>
 
         <%- include("partials/footer") %>
 </body>
+
 </html>

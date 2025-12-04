@@ -45,9 +45,9 @@ main.movie-detail {
 }
 
 .movie-genres .tag {
-    background: #23252c;
-    color: var(--color-text-secondary);
-    font-size: 0.72rem;
+    background: var(--gradient-primary);
+    color: var(--color-text);
+    font-size: 1rem;
     padding: 2px 8px;
     border-radius: 14px;
     display: inline-block;

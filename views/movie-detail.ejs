@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>
-        <%= title %> - MyCinemaCollector
-    </title>
-    <!--Meta-->
+  <title>
+    <%= title %> - MyCinemaCollector
+  </title>
+  <!--Meta-->
   <meta charset="UTF-8" />
   <meta name="description"
     content="Manage your movie collection, organize titles, and discover the latest additions from the community at MyCinemaCollector." />
@@ -31,65 +31,57 @@
 </head>
 
 <body>
-    <%- include("partials/header") %>
+  <%- include("partials/header") %>
 
-        <main class="movie-detail">
-            <section class="movie-detail-hero">
-                <div class="movie-detail-poster">
-                    <img src="<%= movie.poster %>" alt="<%= movie.title %>">
-                </div>
-                <div class="movie-detail-info">
-                    <h1>
-                        <%= movie.title %>
-                    </h1>
-                    <p class="movie-meta">
-                        <span>
-                            <%= movie.year %>
-                        </span> ·
-                        <span>
-                            <%= movie.director %>
-                        </span>
-                    </p>
+    <main class="movie-detail">
+      <section class="movie-detail-hero">
+        <div class="movie-detail-poster">
+          <img src="<%= movie.poster %>" alt="<%= movie.title %>">
+        </div>
+        <div class="movie-detail-info">
+          <h1><%= movie.title %></h1>
+          <p class="movie-meta">
+            <span><%= movie.year %></span> ·
+            <span><%= movie.director %></span>
+          </p>
 
-                    <div class="movie-genres">
-                        <% movie.genres.forEach(g=> { %>
-                            <span class="tag">
-                                <%= g %>
-                            </span>
-                        <% }) %>
-                    </div>
+          <div class="movie-genres">
+            <% movie.genres.forEach(g=> { %>
+              <span class="tag"><%= g %></span>
+              <% }) %>
+          </div>
 
-                    <p class="movie-description">
-                        <%= movie.description %>
-                    </p>
-                </div>
-            </section>
+          <div class="movie-description">
+            <%- movie.description %>
+          </div>
+        </div>
+      </section>
 
-            <section class="movie-copies">
-                <h2>Copies for this movie</h2>
-              
-                <% if (movie.copies && movie.copies.length > 0) { %>
-                  <div class="copies-table">
-                    <div class="copies-header">
-                      <span>Owner</span>
-                      <span>Status</span>
-                      <span>Format</span>
-                    </div>
-                    <% movie.copies.forEach(copy => { %>
-                      <div class="copies-row">
-                        <span><%= copy.owner %></span>
-                        <span><%= copy.status %></span>
-                        <span><%= copy.format %></span>
-                      </div>
-                    <% }) %>
-                  </div>
-                <% } else { %>
-                  <p>No copies registered for this movie yet.</p>
-                <% } %>
-              </section>
-        </main>
+      <section class="movie-copies">
+        <h2>Copies for this movie</h2>
+        <hr class="divider-orange">
+        <% if (movie.copies && movie.copies.length> 0) { %>
+          <div class="copies-table">
+            <div class="copies-header">
+              <span>Owner</span>
+              <span>Status</span>
+              <span>Format</span>
+            </div>
+            <% movie.copies.forEach(copy=> { %>
+              <div class="copies-row">
+                <span><%= copy.owner %></span>
+                <span><%= copy.status %></span>
+                <span><%= copy.format %></span>
+              </div>
+              <% }) %>
+          </div>
+          <% } else { %>
+            <p>No copies registered for this movie yet.</p>
+            <% } %>
+      </section>
+    </main>
 
-        <%- include("partials/footer") %>
+    <%- include("partials/footer") %>
 </body>
 
 </html>

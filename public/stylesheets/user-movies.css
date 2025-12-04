@@ -1,3 +1,9 @@
+@import "normalize.css";
+@import "components.css";
+@import "theme.css";
+@import "style.css";
+@import "footer.css";
+
 main.user-movies {
     max-width: 1100px;
     margin: 2rem auto 3rem auto;
@@ -59,15 +65,23 @@ main.user-movies {
     transition: transform 0.1s ease, opacity 0.1s ease;
 }
 
-.btn-table:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
+.btn-edit {
+    background: var(--color-warning);
+    cursor: pointer;
+    opacity: 0.7;
 }
 
 .btn-disabled {
-    background: #555866;
-    cursor: default;
+    background: var(--color-danger);
+    cursor: pointer;
     opacity: 0.7;
+}
+
+.btn-table:hover {
+    background: var(--color-accent);
+    box-shadow: 0px 4px 8px rgba(255, 106, 0, 0.30);
+    opacity: 0.9;
+    transform: translateY(-1px);
 }
 
 /* Responsive */
